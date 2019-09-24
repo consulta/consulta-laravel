@@ -8,6 +8,8 @@ use Consulta\Laravel\Exceptions\UndefinedErrorException;
 use Consulta\Laravel\Lib\DNI;
 use Consulta\Laravel\Lib\RUC;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Config\Repository;
 
 /**
  * Class Consulta
@@ -33,7 +35,7 @@ class Consulta
     }
 
     /**
-     * @return \Illuminate\Config\Repository|mixed
+     * @return Repository|mixed
      */
     public static function getToken(): string
     {
@@ -54,7 +56,7 @@ class Consulta
      * @param string $method
      * @return mixed
      * @throws \Exception
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws GuzzleException
      */
     protected function execute(string $url, array $query, string $method = 'POST')
     {
@@ -70,6 +72,7 @@ class Consulta
 
         switch ($response->getStatusCode()) {
             case 200:
+                //TODO: debería devolver un array vació ?
                 return \GuzzleHttp\json_decode($response->getBody()->getContents(), true);
             case 401:
                 throw new UnauthenticatedException('Token seems not to be valid.');

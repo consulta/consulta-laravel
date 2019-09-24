@@ -5,7 +5,6 @@ namespace Consulta\Laravel\Lib;
 use Consulta\Laravel\Consulta;
 use Consulta\Laravel\Exceptions\InvalidDniException;
 use Consulta\Laravel\Exceptions\InvalidRucException;
-use Illuminate\Support\Collection;
 
 /**
  * Class RUC
@@ -16,34 +15,32 @@ class RUC extends Consulta
 
     /**
      * @param $rucNumber
-     * @return \Illuminate\Support\Collection|mixed
+     * @return mixed
      * @throws InvalidRucException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function byRuc($rucNumber): Collection
+    public function byRuc($rucNumber)
     {
         if (!$this->validateRuc($rucNumber)) {
             throw new InvalidRucException('RUC number seems not to be valid.');
         }
 
-        $response = $this->execute('api/sunat/query/ruc', ['ruc' => $rucNumber]);
-        return collect($response);
+        return $this->execute('api/sunat/query/ruc', ['ruc' => $rucNumber]);
     }
 
     /**
      * @param string $dniNumber
-     * @return Collection
+     * @return mixed
      * @throws InvalidDniException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function byDni(string $dniNumber): Collection
+    public function byDni(string $dniNumber)
     {
         if (!$this->validateDni($dniNumber)) {
             throw new InvalidDniException('DNI number seems not to be valid.');
         }
 
-        $response = $this->execute('api/sunat/query/dni', ['dni' => $dniNumber]);
-        return collect($response);
+        return $this->execute('api/sunat/query/dni', ['dni' => $dniNumber]);
     }
 
 
