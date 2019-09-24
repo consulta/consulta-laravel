@@ -21,7 +21,27 @@ O agregar la siguiente línea a tu archivo composer.json:
        ...
    }
 ```
+## Configuración
 
+### servicio consulta
+
+agregar en `config/services.php` la siguiente entrada
+
+    ```php
+       'consulta' => [
+          'token' => env('CONSULTA_TOKEN')
+       ],
+    ```
+    
+### variable de entorno
+
+agregar al `.env` la siguiente entrada:
+
+ ```bash
+CONSULTA_TOKEN=<tu-token-de-acceso>
+```
+
+** Puedes generar tu token registrándote en la web de [consulta.pe](https://consulta.pe/auth/register)
 
 ## Reglas de validación Disponibles
 
