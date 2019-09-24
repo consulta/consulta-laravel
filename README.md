@@ -27,11 +27,11 @@ O agregar la siguiente línea a tu archivo composer.json:
 
 agregar en `config/services.php` la siguiente entrada
 
-    ```bash
-       'consulta' => [
+ ```bash
+ 'consulta' => [
           'token' => env('CONSULTA_TOKEN')
        ],
-    ```
+```
     
 ### variable de entorno
 
