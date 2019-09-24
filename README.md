@@ -27,7 +27,7 @@ O agregar la siguiente línea a tu archivo composer.json:
 
 agregar en `config/services.php` la siguiente entrada
 
-    ```php
+    ```bash
        'consulta' => [
           'token' => env('CONSULTA_TOKEN')
        ],
