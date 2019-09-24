@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Consulta\Laravel;
 
 use Consulta\Laravel\Exceptions\ServerErrorException;
 use Consulta\Laravel\Exceptions\UnauthenticatedException;
 use Consulta\Laravel\Exceptions\UndefinedErrorException;
 use Consulta\Laravel\Lib\DNI;
-use Consulta\Laravel\Lib\ExchangeRate;
 use Consulta\Laravel\Lib\RUC;
 use GuzzleHttp\Client;
 
@@ -35,14 +33,6 @@ class Consulta
     }
 
     /**
-     * @return ExchangeRate
-     */
-    public static function exchange()
-    {
-        return new ExchangeRate();
-    }
-
-    /**
      * @return \Illuminate\Config\Repository|mixed
      */
     public static function getToken(): string
@@ -62,7 +52,7 @@ class Consulta
      * @param $url
      * @param $query
      * @param string $method
-     * @return string|null
+     * @return mixed
      * @throws \Exception
      * @throws \GuzzleHttp\Exception\GuzzleException
      */

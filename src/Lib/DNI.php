@@ -4,7 +4,6 @@ namespace Consulta\Laravel\Lib;
 
 use Consulta\Laravel\Consulta;
 use Consulta\Laravel\Exceptions\InvalidDniException;
-use Illuminate\Support\Collection;
 
 /**
  * Class DNI
@@ -12,21 +11,20 @@ use Illuminate\Support\Collection;
  */
 class DNI extends Consulta
 {
-
     /**
      * Find a person by DNI
      * @param string $dniNumber
-     * @return Collection
+     * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws InvalidDniException
      */
-    public function find(string $dniNumber): Collection
+    public function find(string $dniNumber)
     {
         if (!$this->validateDni($dniNumber)) {
             throw new InvalidDniException('DNI number seems not to be valid.');
         }
         $response = $this->execute('/api/reniec/dni', ['dni' => $dniNumber]);
-        return collect($response);
+        return $response;
     }
 
 

@@ -9,7 +9,7 @@ use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 /**
  * Class TestCase
- * @package Consulta\Laravel\Test
+ * @package lasselehtinen\MyPackage\Test
  */
 class TestCase extends OrchestraTestCase
 {

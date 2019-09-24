@@ -4,7 +4,7 @@ namespace Consulta\Laravel\Test;
 
 /**
  * Class MyPackageFunctionTest
- * @package Consulta\Laravel\Test
+ * @package ConsultaPE\Laravel\Test
  */
 class RucTest extends TestCase
 {
