@@ -17,6 +17,9 @@ class RUC extends Consulta
      * @param $rucNumber
      * @return mixed
      * @throws InvalidRucException
+     * @throws \Consulta\Laravel\Exceptions\ServerErrorException
+     * @throws \Consulta\Laravel\Exceptions\UnauthenticatedException
+     * @throws \Consulta\Laravel\Exceptions\UndefinedErrorException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function byRuc($rucNumber)
@@ -32,6 +35,9 @@ class RUC extends Consulta
      * @param string $dniNumber
      * @return mixed
      * @throws InvalidDniException
+     * @throws \Consulta\Laravel\Exceptions\ServerErrorException
+     * @throws \Consulta\Laravel\Exceptions\UnauthenticatedException
+     * @throws \Consulta\Laravel\Exceptions\UndefinedErrorException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function byDni(string $dniNumber)

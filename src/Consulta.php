@@ -51,12 +51,14 @@ class Consulta
     }
 
     /**
-     * @param $url
-     * @param $query
+     * @param string $url
+     * @param array $query
      * @param string $method
      * @return mixed
-     * @throws \Exception
      * @throws GuzzleException
+     * @throws ServerErrorException
+     * @throws UnauthenticatedException
+     * @throws UndefinedErrorException
      */
     protected function execute(string $url, array $query, string $method = 'POST')
     {

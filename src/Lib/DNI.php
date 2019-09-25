@@ -15,8 +15,11 @@ class DNI extends Consulta
      * Find a person by DNI
      * @param string $dniNumber
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws InvalidDniException
+     * @throws \Consulta\Laravel\Exceptions\ServerErrorException
+     * @throws \Consulta\Laravel\Exceptions\UnauthenticatedException
+     * @throws \Consulta\Laravel\Exceptions\UndefinedErrorException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function find(string $dniNumber)
     {
