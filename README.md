@@ -3,7 +3,7 @@
 <p align="center">
 
 # Paquete Oficial para Laravel 
-### Para Laravel < 5.5  u framework proyectos, use el SDK [RENIEC-PHP](https://github.com/tecactus/reniec-php) o [SUNAT-PHP](https://github.com/tecactus/sunat-php)!!
+### Para Laravel < 5.5,otros frameworks o standalone, use el SDK [RENIEC-PHP](https://github.com/tecactus/reniec-php) o [SUNAT-PHP](https://github.com/tecactus/sunat-php)!!
 
 ## Instalación
 Instalar usando composer:
