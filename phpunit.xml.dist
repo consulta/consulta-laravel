@@ -11,8 +11,9 @@
          stopOnFailure="false">
 
     <php>
-        <server name="TOKEN" value="BpT3ICvhpTm0jg3ZFOl6toa9iFmxdWVQwKZAmMJ7"/>
+        <server name="TOKEN" value="your-token"/>
     </php>
+
     <testsuites>
         <testsuite name="Consulta Test Suite">
             <directory>tests</directory>

@@ -34,4 +34,15 @@ class TestCase extends OrchestraTestCase
             'Consulta' => Consulta::class,
         ];
     }
+
+    /**
+     * Define environment setup.
+     *
+     * @param \Illuminate\Foundation\Application $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('services.consulta.token', env('TOKEN'));
+    }
 }
