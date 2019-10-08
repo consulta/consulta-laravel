@@ -2,7 +2,8 @@
 
 <p align="center">
 <a href="https://travis-ci.com/consulta/consulta-laravel"><img src="https://travis-ci.com/consulta/consulta-laravel.svg?branch=master" alt="Build Status"></a>
-
+<a href="https://packagist.org/packages/consulta/laravel"><img src="https://poser.pugx.org/consulta/laravel/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/consulta/laravel"><img src="https://poser.pugx.org/consulta/laravel/license" alt="License"></a>
 </p>
 
 # Paquete Oficial para Laravel 
