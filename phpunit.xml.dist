@@ -11,7 +11,7 @@
          stopOnFailure="false">
 
     <php>
-        <server name="TOKEN" value="your-token"/>
+        <env name="TOKEN" value="your-token"/>
     </php>
 
     <testsuites>

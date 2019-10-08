@@ -11,7 +11,7 @@
          stopOnFailure="false">
 
     <php>
-        <server name="TOKEN" value="BpT3ICvhpTm0jg3ZFOl6toa9iFmxdWVQwKZAmMJ7"/>
+        <env name="TOKEN" value="BpT3ICvhpTm0jg3ZFOl6toa9iFmxdWVQwKZAmMJ7"/>
     </php>
     <testsuites>
         <testsuite name="Consulta Test Suite">
