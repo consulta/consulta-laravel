@@ -7,6 +7,7 @@ use Consulta\Laravel\Exceptions\UnauthenticatedException;
 use Consulta\Laravel\Exceptions\UndefinedErrorException;
 use Consulta\Laravel\Lib\DNI;
 use Consulta\Laravel\Lib\RUC;
+use Consulta\Laravel\Lib\Vehicle;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Config\Repository;
@@ -32,6 +33,14 @@ class Consulta
     public static function reniec(): DNI
     {
         return new DNI();
+    }
+
+    /**
+     * @return Vehicle
+     */
+    public static function vehicle(): Vehicle
+    {
+        return new Vehicle();
     }
 
     /**
