@@ -37,7 +37,7 @@ class Vehicle extends Consulta
      */
     public function validatePlate($plate)
     {
-        $validator = Validator::make(['plate' => $plate], ['plate' => 'required|alpha|size:6']);
+        $validator = Validator::make(['plate' => $plate], ['plate' => 'required|alpha_num|size:6']);
         return !$validator->fails();
     }
 }
