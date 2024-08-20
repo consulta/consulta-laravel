@@ -116,6 +116,91 @@ array:12 [▼
 ]
 ```
 
+### Consulta Vehicular
+
+#### Por Placa
+```php
+use Consulta\Laravel\Consulta;
+
+$companybyDni = Consulta::vehicle()->find('<placa>'); // placa sin guión
+
+//respuesta de ejemplo.Se han ocultado datos en esta respuesta por seguridad
+array:12 [▼
+  "data" => array:8 [
+    "plate" => "<placa>"
+    "current_plate" => "<placa>"
+    "registration_entry" => "<número de partida>"
+    "vehicle_information" => array:31 [
+      "vin" => "<bin info>"
+      "axles" => "2"
+      "brand" => "JEEP"
+      "color" => "GRIS"
+      "model" => "GRAND CHEROKEE LIMITED"
+      "plate" => "<placa>"
+      "seats" => "5"
+      "usage" => "Vehiculos Particulares (Categoria M)"
+      "width" => "2.15"
+      "height" => "1.78"
+      "length" => "4.82"
+      "status" => "EN CIRCULACION"
+      "wheels" => "4"
+      "payload" => "0.787"
+      "version" => "4X4"
+      "category" => "M1"
+      "body_type" => "SUV"
+      "condition" => "SIN DEFINIR"
+      "cylinders" => "6"
+      "fuel_type" => "GASOLINA"
+      "drivetrain" => "4X4"
+      "dry_weight" => "2.162"
+      "model_year" => "2012"
+      "passengers" => "4"
+      "engine_power" => "210@6350"
+      "gross_weight" => "2.949"
+      "current_plate" => "<placa>"
+      "engine_number" => "<engine_number>"
+      "serial_number" => "<serial_number>"
+      "manufacturing_year" => "2012"
+      "engine_displacement" => "3.6"
+    ]
+    "previous_plates" => []
+    "owners" => array:1 [
+      0 => array:5 [
+        "name" => "<nombre del propietario actual>"
+        "type" => "person"
+        "title_number" => "<número de título>"
+        "ownership_date" => "<fecha>"
+        "document_number" => "<dni>"
+      ]
+    ]
+    "previous_owners" => array:3 [
+      0 => array:1 [
+        0 => array:3 [
+          "name" => "<nombre propietario anterior>"
+          "document_type" => "PARTIDA"
+          "document_number" => "<document_number>"
+        ]
+      ]
+      1 => array:1 [
+        0 => array:3 [
+          "name" => "<nombre propietario anterior>"
+          "document_type" => "PARTIDA"
+          "document_number" => "<document_number>"
+        ]
+      ]
+      2 => array:1 [
+        0 => array:3 [
+          "name" => "<nombre propietario anterior>"
+          "document_type" => "PARTIDA"
+          "document_number" => "<document_number>"
+        ]
+      ]
+    ]
+    "liens" => []
+  ]
+]
+```
+
 ## Reglas de validación Disponibles
 
  - [`IsValidDNIDigit`](#isvaliddnidigit)
